@@ -4,6 +4,7 @@ import luxe.Camera.SizeMode;
 import luxe.Color;
 import luxe.Input;
 import luxe.Sprite;
+import luxe.Text.TextAlign;
 import luxe.Vector;
 import phoenix.Texture.FilterType;
 
@@ -58,6 +59,38 @@ class Main extends luxe.Game
 			depth:10, 
 			color : new Color( 0.8, 0.3, 0.2, 1 )
 		});
+		
+		Luxe.draw.text({
+            pos : new Vector (160,115),
+            point_size : 5,
+			align : TextAlign.right,
+            depth : 10,
+            text : '160,120',
+            color : new Color(0.8, 0.3, 0.2, 1)
+        });
+		
+		Luxe.draw.text({
+            pos : new Vector (0,0),
+            point_size : 5,
+			align : TextAlign.left,
+            depth : 10,
+            text : '0,0',
+            color : new Color(0.8, 0.3, 0.2, 1)
+        });
+		
+		Luxe.draw.text({
+            pos : new Vector (0,70),
+            point_size : 5,
+			align : TextAlign.left,
+            depth : 10,
+            text : 
+				'game resolution: ' + game_resolution_x + ' x ' + game_resolution_y + '\n' +
+				'screen resolution: ' + Luxe.screen.w + ' x ' + Luxe.screen.h + '\n' +
+				'zoom factor: ' + zoomfactor + '\n'
+				,
+            color : new Color(0.8, 0.3, 0.2, 1)
+        });
+		
 	}
 
 	override function onkeyup(e:KeyEvent) 
